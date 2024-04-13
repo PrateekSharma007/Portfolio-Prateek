@@ -1,12 +1,9 @@
 import React from 'react'
-import './Hero.css'
-import profile_img from '../../assets/Prateek Photo 2.jpeg'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { FaLinkedin } from "react-icons/fa"
-import { FaGithub } from "react-icons/fa"
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa"
 import { FaSquareXTwitter } from "react-icons/fa6"
-import { FaInstagram } from "react-icons/fa"
-import { FaPlaystation } from "react-icons/fa";
+import profile_img from '../../assets/pp2.jpeg'
+import './Hero.css'
 
 
 function downloadResume() {
