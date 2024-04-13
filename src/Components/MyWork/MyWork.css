@@ -9,7 +9,7 @@
 
 .mywork-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns:  1.4fr 1fr;
     gap: 30px;
 }
 .mywork-container img{
@@ -44,15 +44,27 @@
     gap: 30px;
     transition: 0.6s;
 }
+
+@media screen and (max-width:1100px){
+    .mywork-container{
+        grid-template-columns:  none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
 @media(max-width:768px){
     .mywork{
         gap: 50px;
         margin: 50px 6%;
-        align-items: start;
+        /* align-items: start; */
     }
     
     .mywork-container{
-        grid-template-columns: 1fr 1fr;
+        /* grid-template-columns: 1fr 1fr; */
         gap: 20px;
     }
     .mywork-showmore{
@@ -65,3 +77,5 @@
         gap: 20px;
     }
 }
+
+
