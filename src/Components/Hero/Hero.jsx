@@ -1,0 +1,43 @@
+import React from 'react'
+import './Hero.css'
+import profile_img from '../../assets/Prateek Photo 2.jpeg'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { FaLinkedin } from "react-icons/fa"
+import { FaGithub } from "react-icons/fa"
+import { FaSquareXTwitter } from "react-icons/fa6"
+import { FaInstagram } from "react-icons/fa"
+import { FaPlaystation } from "react-icons/fa";
+
+
+function downloadResume() {
+  // Replace 'resume.pdf' with the path to your resume file
+  const resumeUrl = 'https://drive.google.com/file/d/1uoZAjWd8oEoYa2uKHA5Ozm2NvkZ4yvQp/view?usp=drive_link';
+  const link = document.createElement('a');
+  link.href = resumeUrl;
+  link.setAttribute('download', 'resume.pdf');
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+const Hero = () => {
+  return (
+    <div id='home' className='hero'>
+      <img src={profile_img} alt="" className='profile-img' />
+      <h1><span>I'm Prateek Sharma,</span> GenAI/MERN stack developer based in India.</h1>
+      <p>I am a  developer from Delhi, India with experience in working in the Field of AI and Web Developement.</p>
+      <div className="hero-action">
+        <div className="hero-connect"><AnchorLink className='anchor-link' offset={50} href='#contact'>Connect with me</AnchorLink></div>
+        <div className="hero-connect"><a href="https://drive.google.com/file/d/1uoZAjWd8oEoYa2uKHA5Ozm2NvkZ4yvQp/view?usp=drive_link" style={{ textDecoration: 'none' }}>My resume</a></div>
+      </div>
+      <div className='justify-center gap-4 text-6xl gap-2'>
+        <a href="https://www.linkedin.com/in/prateeksh007/"><FaLinkedin style={{ marginRight: '5px',fontSize: '2em' }} /></a>
+        <a href="https://github.com/PrateekSharma007"><FaGithub style={{ marginRight: '5px', fontSize: '2em' }} /></a>
+        <a href="https://twitter.com/ssts3535"><FaSquareXTwitter style={{ marginRight: '  5px', fontSize: '2em' }} /></a>
+        <a href="https://www.instagram.com/"><FaInstagram style={{ marginRight: '5px', fontSize: '2em' }} /></a>
+        
+      </div>
+    </div>
+  )
+}
+
+export default Hero
