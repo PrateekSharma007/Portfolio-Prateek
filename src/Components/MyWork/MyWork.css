@@ -79,3 +79,9 @@
 }
 
 
+@media screen and (max-width:600px){
+    .mywork-container > a > img{
+        width: 100%!important;
+        /* aspect-ratio: 7/5; */
+    }
+}
